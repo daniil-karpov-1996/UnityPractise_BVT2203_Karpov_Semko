@@ -9,18 +9,11 @@ public class EnemyAI : MonoBehaviour
     public int health = 10;
     public int maxHealth = 10;
     public Text healthText;
-    // Добавьте любые другие компоненты или переменные, которые вам понадобятся
+
 
     private void Start()
     {
-        // Инициализация начального здоровья
         health = maxHealth;
-
-        // Обновление текстового поля здоровья (если есть)
-        if (healthText != null)
-        {
-            healthText.text = "Health: " + health.ToString();
-        }
     }
 
     public void TakeDamage(int damage)

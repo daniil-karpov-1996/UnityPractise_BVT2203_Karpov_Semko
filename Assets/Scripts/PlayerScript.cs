@@ -11,28 +11,16 @@ public class PlayerScript : MonoBehaviour
     public GameObject Fireball;
     public Transform Pricel;
     public float Firespeed = 500.0f;
-    // Добавьте любые другие компоненты или переменные, которые вам понадобятся
 
     private void Start()
     {
         // Инициализация начального здоровья
         health = maxHealth;
-        // Обновление текстового поля здоровья (если есть)
-        if (healthText != null)
-        {
-            healthText.text = "Health: " + health.ToString();
-        }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        // Обновление текстового поля здоровья (если есть)
-        if (healthText != null)
-        {
-            healthText.text = "Health: " + health.ToString();
-        }
-
         // Проверяем, окончилось ли здоровье
         if (health <= 0)
         {
@@ -44,7 +32,6 @@ public class PlayerScript : MonoBehaviour
     {
         targetObject.SetActive(false);
         // Обработка смерти игрового объекта
-        // Например, деактивация объекта или вызов другой функции
     }
 
     private void Update()
